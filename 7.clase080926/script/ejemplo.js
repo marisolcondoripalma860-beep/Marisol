@@ -26,11 +26,16 @@ function eliminarTarea(indice){
 }
 function mostrarTareas(){
     console.log("Mostrando lista de tareas:");
+     const contenedor = document.getElementById("respuesta");
+     let respuestaHtml = "";
     tareas.forEach((tarea, indice) => {
-        console.log(`${indice + 1}.[${tarea.completada ? 'x' : 'incompleto '}] 
+        console.log(`${indice + 1}.[${tarea.completada }] 
             ${tarea.descripcion}`);
-        });
-    
+             respuestaHtml =`<ul>`;
+            respuestaHtml +=`<li>${indice + 1}.[${tarea.completada}]); ${tarea.descripcion}</p>`;
+            respuestaHtml += `</ul>
+         });
+        contenedor.innerHTML = respuestaHtml;   
 }
 //adicionar las tareas
 agregarTarea("comprar leche","Completado");
@@ -38,4 +43,3 @@ agregarTarea("hacer ejercicios","Completado");
 agregarTarea("Estudiar javaScript","Incompletado");
 agregarTarea("subir a GitHud","Incompletado");
 mostrarTareas();
-

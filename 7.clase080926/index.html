@@ -11,18 +11,19 @@
     <input type="text" id="tarea" placeholder="Ingrese su tarea">
     <fieldset>
     <legend>seleccione una opcion:</legend>
-        <input type="radio" name="trabajo" value="1"> completada
-        <input type="radio" name="trabajo" value="2"> Incompleta
+        <input type="radio" name="trabajo" value="1"> completado
+        <input type="radio" name="trabajo" value="2"> Incompletado
     </fieldset>
     <select name="tarea" id="tareaSelect">
         <option value="">seleccione una tarea</option>
-        <option value="Completado">Completada</option>
-        <option value="Incompleto">Incompleta</option>
+        <option value="Completado">completado</option>
+        <option value="Incompleto">Incompletado</option>
         </select>
         <br>
     <button onclick="agregarTarea()">Adicionar tarea</button>
-     <button onclick="mostrarTarea()">Mostrar tarea</button>
+    <button onclick="mostrarTarea()">mostrar tarea</button>
     <button onclick="EliminarTarea()">Eliminar tarea</button>
+
     <p>este es un parrafo del ejemplo.</p>
     <p id ="respuesta"></p>
     <script src="./script/ejemplo.js"></script>
